@@ -3,12 +3,12 @@ package src.hot100;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpiralMatrix {
+public class SpiralMatrix_54 {
     public static void main(String[] args) {
         int[][] matrix = {
-                { 1,2,3 },
-                {4,5,6,},
-                { 7,8,9 }
+                {1,2,3,4 },
+                {5,6,7,8},
+                {9,10,11,12}
         };
 
         List<Integer> ans = new ArrayList();
@@ -20,35 +20,30 @@ public class SpiralMatrix {
         int top = 0;
         int bottom = m - 1;
 
-        while(left <= right && top <= bottom){
+        while(top <= bottom && left <= right){
 
-
-            for(int i = left; i <= right;i++){
-                ans.add(matrix[top][i]);
+            for(int j = left; j <= right;j++){
+                ans.add(matrix[top][j]);
             }
-
             top++;
 
-            if (top > bottom) break;
-            for(int j = top; j <= bottom;j++){
-                ans.add(matrix[j][right]);
+            if(bottom < top) break;
+            for(int i = top; i <= bottom;i++){
+                ans.add(matrix[i][right]);
             }
-
             right--;
-            if(top > bottom) break;
-            for(int j = right;j >= left;j--){
+
+            if(right < left) break;
+            for(int j = right; j >= left;j--){
                 ans.add(matrix[bottom][j]);
             }
-
             bottom--;
 
-            if (left > right) break;
-            for(int i = bottom; i <= top;i++){
+            if(bottom < top) break;
+            for(int i = bottom; i >= top;i--){
                 ans.add(matrix[i][left]);
             }
-
             left++;
-
         }
     }
 }
