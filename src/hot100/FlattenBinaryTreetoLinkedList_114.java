@@ -1,4 +1,4 @@
-package src;
+package src.hot100;
 
 public class FlattenBinaryTreetoLinkedList_114 {
 

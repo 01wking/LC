@@ -1,4 +1,4 @@
-package src;
+package src.hot100;
 
 import java.util.LinkedList;
 import java.util.Queue;

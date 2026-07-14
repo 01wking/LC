@@ -1,4 +1,4 @@
-package src;
+package src.hot100;
 
 public class LongestValidParentheses_32 {
     public static void main(String[] args) {

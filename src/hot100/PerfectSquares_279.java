@@ -1,4 +1,4 @@
-package src;
+package src.hot100;
 
 public class PerfectSquares_279 {
     public static void main(String[] args) {

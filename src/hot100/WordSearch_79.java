@@ -1,4 +1,4 @@
-package src;
+package src.hot100;
 
 public class WordSearch_79 {
     static int [][] dir = new int [][]{{0,-1},{0,1},{-1,0},{1,0}};
